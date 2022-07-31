@@ -1,0 +1,31 @@
+<div class="container">
+    <!-- <a (click)="goBack()">Go Back</a> -->
+    <h2 class="tblHeading">{{retreivedStudent.name}}'s Details</h2>
+    <div class="tblContain">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email Address</th>
+                <th>Cohort</th>
+                <th>Phone Number</th>
+                <th>Actions</th>
+            </tr>
+            <tr >
+                <td>{{retreivedStudent._id}}</td>
+                <td>{{retreivedStudent.name}}</td>
+                <td>{{retreivedStudent.email}}</td>
+                <td>{{retreivedStudent.cohort}}</td>
+                <td>{{retreivedStudent.phoneNumber}}</td>
+                <td>
+                    <!-- <a class="actions view" routerLink="" title="View this Student">View</a>&nbsp; -->
+                    <a class="actions edit" routerLink="/student/update/{{retreivedStudent._id}}" title="Edit this Student">Edit</a>&nbsp;
+                    <a class="actions delete" (click)="removeStudent(retreivedStudent._id)" title="Delete this Student">Delete</a>&nbsp;
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="goBack" (click)="goBack()">
+        <mat-icon>arrow_left</mat-icon><a>Go Back</a>
+    </div>
+</div>

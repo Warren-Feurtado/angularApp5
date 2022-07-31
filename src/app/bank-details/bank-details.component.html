@@ -1,0 +1,63 @@
+<div class="container">
+
+    <div class="formCtrl" *ngIf="retreivedStudent && !bankInfo">
+        <form [formGroup]="addStudentBankForm" (ngSubmit)="addStudentBankInfo()">
+            
+            <h2 class="frmHeading">Add Bank Information for {{retreivedStudent.name}} {{retreivedStudent._id}}</h2>
+            <input type="text" formControlName="studentId">
+            <div class="inputBx">
+                <label for="">Account No.</label><br>
+                <input type="text" formControlName="accountNum" placeholder="Account Number">
+            </div>
+            
+            <div class="inputBx">
+                <label for="">Bank</label><br>
+                <input type="text" formControlName="bank" placeholder="Bank Name">
+            </div>
+            <div class="inputBx">
+                <label for="">Branch</label><br>
+                <input type="text" formControlName="branch" placeholder="Branch">
+            </div>
+            <div class="inputBx">
+                <label for="">Account Type</label><br>
+                <input type="text" formControlName="accountType" placeholder="Type of Account">
+            </div>
+            <div class="inputBx">
+                <label for="">Status</label><br>
+                <input type="text" formControlName="status" placeholder="Account Status">
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+    
+    <div class="bankInfo" *ngIf="bankInfo">
+            
+            <h2 class="frmHeading">Edit {{retreivedStudent.name}}'s Bank Information</h2>
+            <div class="inputBx">
+                <label for="">Account No.</label><br>
+                <span>{{bankInfo.accountNum}}</span>
+            </div>
+            
+            <div class="inputBx">
+                <label for="">Bank</label><br>
+                <span>{{bankInfo.bank}}</span>
+            </div>
+            <div class="inputBx">
+                <label for="">Branch</label><br>
+                <span>{{bankInfo.branch}}</span>
+            </div>
+            <div class="inputBx">
+                <label for="">Account Type</label><br>
+                <span>{{bankInfo.accountType}}</span>
+            </div>
+            <div class="inputBx">
+                <label for="">Status</label><br>
+                <span>{{bankInfo.status}}</span>
+            </div>
+            <button>Edit</button>
+    </div>
+    <div class="goBack" (click)="goBack()">
+        <!-- <mat-icon>arrow_left</mat-icon> -->
+        <a>Go Back</a>
+    </div>
+</div>

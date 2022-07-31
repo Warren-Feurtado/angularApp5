@@ -1,0 +1,36 @@
+.container{
+    width: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding: 1vw 5vw;
+    /* border: 1px solid red; */
+}
+
+.container .heading{
+    width: 45%;
+    text-align: center;
+    font-size: 2.5vw;
+    margin: 3vw auto;
+    padding: 1vw 3vw;
+    border-radius: 10px;
+    color: rgb(45, 45, 45);
+    background-color: rgb(242, 242, 242);
+}
+
+.container .imgBx{
+    width: 50%;
+    height: 25vw;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: rgb(199,231,236);
+
+}
+
+.imgBx img{
+    width: 95%;
+    height: 90%;
+}

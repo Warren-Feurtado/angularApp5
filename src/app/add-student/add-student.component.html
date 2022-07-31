@@ -1,0 +1,30 @@
+<div class="container">
+
+    <div class="formCtrl">
+        <form [formGroup]="createStudentForm" (ngSubmit)="addStudent()">
+            <h2 class="frmHeading">Add A New Student</h2>
+            <div class="inputBx">
+                <label for="">Name</label><br>
+                <input type="text" formControlName="name" placeholder="Student Name">
+            </div>
+            <div class="inputBx">
+                <label for="">Email</label><br>
+                <input type="email" formControlName="email" placeholder="Email Address">
+            </div>
+            <div class="inputBx">
+                <label for="">Phone</label><br>
+                <input type="text" formControlName="phoneNumber" placeholder="Contact Number">
+            </div>
+            <div class="inputBx">
+                <label for="">Cohort</label><br>
+                <input type="text" formControlName="cohort" placeholder="Student Cohort">
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <div class="goBack" (click)="goBack()">
+        <!-- <mat-icon>arrow_left</mat-icon> -->
+        <a>Go Back</a>
+    </div>
+</div>

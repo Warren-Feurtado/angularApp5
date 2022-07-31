@@ -1,0 +1,25 @@
+<div class="container">
+    <h2 class="tblHeading">Students' List</h2>
+    <div class="tblContain">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Cohort</th>
+                <th>Actions</th>
+            </tr>
+            <tr *ngFor="let student of retreivedStudents">
+                <td>{{student.name}}</td>
+                <td>{{student.cohort}}</td>
+                <td>
+                    <a class="actions view" routerLink="/student/find/{{student._id}}" title="View this Student">View</a>&nbsp;
+                    <a class="actions edit" routerLink="/student/update/{{student._id}}" title="Edit this Student">Edit</a>&nbsp;
+                    <a class="actions delete" (click)="removeStudent(student._id)" title="Delete this Student">Delete</a>&nbsp;
+                    <a class="" routerLink="/student/{{student._id}}/bank-info/add" title="View Student Bank Information">Bank Info</a>&nbsp;
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="goBack" (click)="goBack()">
+        <mat-icon>arrow_left</mat-icon><a>Go Back</a>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+
+    <div class="formCtrl">
+        <form [formGroup]="updateStudentForm" (ngSubmit)="updateStudent()">
+            <h2 class="frmHeading">Edit {{retreivedStudent.name}}'s Details</h2>
+            <div class="inputBx">
+                <label for="">Name</label><br>
+                <input type="text" formControlName="name">
+            </div>
+            <div class="inputBx">
+                <label for="">Email</label><br>
+                <input type="email" formControlName="email">
+            </div>
+            <div class="inputBx">
+                <label for="">Phone</label><br>
+                <input type="text" formControlName="phoneNumber">
+            </div>
+            <div class="inputBx">
+                <label for="">Cohort</label><br>
+                <input type="text" formControlName="cohort">
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <div class="goBack" (click)="goBack()">
+        <mat-icon>arrow_left</mat-icon>
+        <a>Go Back</a>
+    </div>
+</div>
